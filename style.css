@@ -1,0 +1,96 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: hsl(222, 26%, 31%);
+  }
+  
+  .calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  }
+
+  .theme-calculator {
+    display: flex;
+    align-items: center;
+  }
+  .radio {
+    display: flex;
+    margin-left: 10rem;
+    border-radius: 16px;
+    background-color: #29334E;
+  }
+  .radio span input {
+    cursor: pointer;
+  }
+
+  h1 {
+    color: #fff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+  
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 0;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+    margin: 6px;
+    height: 4rem;
+  }
+  .del {
+    background-color: rgb(53,118,128) !important;
+    color: #fff !important;
+  }
+  .reset {
+    background-color: rgb(53,118,128) !important;
+    color: #fff !important;
+    width: 5.7em !important;
+  }
+  .equal {
+    background-color: rgb(185,81,8) !important;
+    color: #fff !important;
+    width: 6em !important;
+    margin-left: 3.2em !important;
+  }
+  
+  .calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+  }
+  
+  
+  .output {
+    grid-column: 1 / -1;
+    background-color: rgb(24,32,51);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+  }
+  
+  .output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+  }
+  
+  .output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+  }
